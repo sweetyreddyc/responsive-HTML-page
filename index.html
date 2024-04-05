@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        background-color: #ff7070;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        padding: 1% 5% 1% 5%;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      .navbar a:hover {
+        background-color: #e98484;
+        color: black;
+      }
+      .navbar a.active {
+        background-color: #555;
+        color: white;
+      }
+      .navbar .icon {
+        display: none;
+      }
+      .first-main-div {
+        display: flex;
+      }
+      .first-main-child1,
+      .first-main-child2 {
+        width: 50%;
+        /* padding: 0 10% 0 10%; */
+        overflow: hidden;
+        /* height: 80vh; */
+      }
+
+      .first-main-child1 {
+        display: flex;
+        align-items: center;
+        padding: 0 7% 0 7%;
+      }
+
+      .first-main-child2 img {
+        width: 100%;
+        height: auto;
+      }
+
+      .loremHeading {
+        font-size: 50px;
+      }
+
+      .loremDesc {
+        text-align: justify;
+      }
+
+      button {
+        height: 40px;
+        width: 200px;
+        background-color: #ff7070;
+        border: none;
+        font-weight: bold;
+        border-radius: 2px;
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      .second-child {
+        display: flex;
+        margin-top: 50px;
+      }
+
+      .second-child-imgDiv,
+      .second-childContentDiv {
+        width: 50%;
+        overflow: hidden;
+      }
+
+      .second-childContentDiv {
+        display: flex;
+        align-items: center;
+      }
+
+      .second-childContentDiv div {
+        background-color: #ff7070;
+        padding: 8%;
+        border-radius: 5px;
+      }
+
+      .second-child-imgDiv {
+        display: flex;
+        gap: 20px;
+        height: 28.3rem;
+        padding: 0 7%;
+      }
+
+      .imgDivs {
+        height: 48%;
+      }
+
+      .imgDivs:first-child {
+        margin-bottom: 15px;
+      }
+      .imgDivs img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .second-child-imgDiv2 {
+        width: 50%;
+        height: 100%;
+      }
+
+      .second-child-imgDiv2 img {
+        width: 100%;
+      }
+
+      .leftImgDiv {
+        width: 50%;
+      }
+      .arrow {
+        display: flex;
+        gap: 5px;
+        padding: 0% !important;
+      }
+      @media screen and (max-width: 600px) {
+        .navbar a:not(:first-child) {
+          display: none;
+        }
+        .navbar a.icon {
+          float: right;
+          display: block;
+        }
+        .first-main-child1,
+        .first-main-child2 {
+          width: 100%;
+        }
+        .first-main-child1 {
+          padding: 0 0 0 0;
+        }
+        .navbar {
+          display: block;
+        }
+        .navbar.responsive {
+          position: relative;
+        }
+        .navbar.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .navbar.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .first-main-div {
+          display: block;
+        }
+
+        .second-child {
+          display: block;
+        }
+
+        .second-child-imgDiv,
+        .second-childContentDiv {
+          width: 100%;
+          overflow: hidden;
+        }
+        .second-child-imgDiv {
+          height: 100%;
+          display: block;
+          padding: 0%;
+        }
+
+        .second-child-imgDiv2 {
+          width: 100%;
+        }
+        .leftImgDiv {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar" id="myNavbar">
+      <a class="" href="#home">Home</a>
+      <a href="#order">Order</a>
+      <a href="#food">Food</a>
+      <a href="#restaurant">Restaurant</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#orders">Orders</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        &#9776;
+      </a>
+    </div>
+    <div>
+      <div class="first-main-div">
+        <div class="first-main-child1">
+          <div>
+            <h1 class="loremHeading">LOREM IPSUM</h1>
+            <p class="loremDesc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+              eaque fugit nesciunt impedit? Qui repellat explicabo omnis
+              voluptate laborum impedit vitae voluptatibus commodi! Error quam
+              laborum mollitia, nisi modi et?
+            </p>
+            <button>Click Me!</button>
+          </div>
+        </div>
+        <div class="first-main-child2">
+          <img src="/images/pexels-robin-stickel-70497.jpg" alt="" />
+        </div>
+      </div>
+      <div class="second-child">
+        <div class="second-child-imgDiv">
+          <div class="leftImgDiv">
+            <div class="imgDivs">
+              <img src="/images/pexels-rachel-claire-6752433.jpg" alt="" />
+            </div>
+            <div class="imgDivs">
+              <img src="/images/pexels-eva-bronzini-6141651.jpg" alt="" />
+            </div>
+          </div>
+          <div class="second-child-imgDiv2">
+            <img src="/images/pexels-mister-mister-3434523.jpg" alt="" />
+          </div>
+        </div>
+        <div class="second-childContentDiv">
+          <div>
+            <p>LOREM IPSUM</p>
+            <h1>LOREM IPSUM SET ADEMIR</h1>
+            <div class="arrow">
+              <p>Click</p>
+              <img src="/images/icons8-arrow-30.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+    </script>
+  </body>
+</html>
